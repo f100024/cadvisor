@@ -1,3 +1,10 @@
+# Disclaimer
+As you can see this repository is fork of [google/cadvisor](https://github.com/google/cadvisor) and main goal is support and 
+distribute docker images for cAdvisor(amd64, arm64, 386).
+
+To run image from current repository use [https://hub.docker.com/repository/docker/f100024/cadvisor](f100024/cadvisor:latest) image.
+
+
 ![cAdvisor](logo.png "cAdvisor")
 
 ![test status](https://github.com/google/cadvisor/workflows/Test/badge.svg)
