@@ -1,4 +1,4 @@
-name: build
+name: Build and push to docker hub
 on: 
   workflow_dispatch:
     inputs:
@@ -6,7 +6,6 @@ on:
         description: Reference to checkout (SHA, tag, branch) 
         type: string
         required: true
-        
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -15,7 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: ${{ inputs.reference }}
+          fetch-depth: 0
+
+      - name: Switch to the set reference
+        run: |
+          git checkout ${{ inputs.reference }}
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
