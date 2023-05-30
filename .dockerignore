@@ -1,0 +1,6 @@
+Dockerfile
+.github
+.gitignore
+.golangci.yml
+*.tar
+*.md

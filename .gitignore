@@ -13,3 +13,4 @@ _output/
 .idea/
 *.iml
 *.swp
+*.tar
